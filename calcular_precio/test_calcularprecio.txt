@@ -1,0 +1,45 @@
+
+>>> from calcular_precio import calcular_precio_total
+
+-- Test 1: Sin descuento
+>>> productos = [{"Nombre": "Cafe", "precio": 100, "cantidad": 2}, {"Nombre": "Te", "precio": 200, "cantidad": 3}]
+>>> calcular_precio_total(productos)
+800
+
+-- Test 2: Con descuento por producto
+>>> productos = [{"Nombre": "Galletas", "precio": 1025, "cantidad": 5}]
+>>> calcular_precio_total(productos)
+4612.5
+
+-- Test 3: Con descuento por total
+>>> productos = [{"Nombre": "Pan", "precio": 900, "cantidad": 1}, {"Nombre": "Leche", "precio": 100, "cantidad": 8}, {"Nombre": "Queso", "precio": 700, "cantidad": 1}, {"Nombre": "Jamón", "precio": 300, "cantidad": 3}, {"Nombre": "Yogurt", "precio": 100, "cantidad": 9}, {"Nombre": "Cereal", "precio": 100, "cantidad": 9}]
+>>> calcular_precio_total(productos)
+4845.0
+
+-- Test 4: Con descuento por total y por producto
+>>> productos = [{"Nombre": "Videojuego", "precio": 900, "cantidad": 2}, {"Nombre": "Telefono", "precio": 200, "cantidad": 8}, {"Nombre": "Tablet", "precio": 500, "cantidad": 3}, {"Nombre": "Laptop", "precio": 300, "cantidad": 6}, {"Nombre": "Mouse", "precio": 100, "cantidad": 10}, {"Nombre": "Teclado", "precio": 500, "cantidad": 3}]
+>>> calcular_precio_total(productos)
+7961.0
+
+-- Test 5: Con lista de productos vacia
+>>> productos = []
+>>> calcular_precio_total(productos)
+0
+
+-- Test 6: Caso borde 
+>>> productos = [{"Nombre": "Cables", "precio": 100, "cantidad": 1}, {"Nombre": "Audifonos", "precio": 200, "cantidad": 1}, {"Nombre": "Mouse", "precio": 300, "cantidad": 1}, {"Nombre": "Teclado", "precio": 400, "cantidad": 1}, {"Nombre": "Monitor", "precio": 500, "cantidad": 1}, {"Nombre": "Laptop", "precio": 600, "cantidad": 1}, {"Nombre": "Tablet", "precio": 700, "cantidad": 1}, {"Nombre": "Telefono", "precio": 800, "cantidad": 1}, {"Nombre": "Videojuego", "precio": 900, "cantidad": 1}, {"Nombre": "Consola", "precio": 1000, "cantidad": 1}]
+>>> calcular_precio_total(productos)
+5225.0
+
+-- Test 7: Producto Duplicado
+>>> productos = [{"Nombre": "Cables", "precio": 100, "cantidad": 1}, {"Nombre": "Guantes", "precio": 200, "cantidad": 1}, {"Nombre": "Cables", "precio": 200, "cantidad": 1}]
+>>> calcular_precio_total(productos)
+'Error: Producto duplicado'
+
+-- Test 8: Precio o cantidad invalida
+>>> productos = [{"Nombre": "Cables", "precio": -100, "cantidad": 1}, {"Nombre": "Guantes", "precio": 200, "cantidad": 1}, {"Nombre": "Cables", "precio": 200, "cantidad": 1}]
+>>> calcular_precio_total(productos)
+'Error: Precio o cantidad invalida'
+
+
+
