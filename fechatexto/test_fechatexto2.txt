@@ -1,0 +1,53 @@
+>>> from fechatexto import fecha_texto
+
+>>> fecha_texto('8/11/2004')
+'Ocho de noviembre de dos mil cuatro'
+
+>>> fecha_texto('1/1/2004')
+'Uno de enero de dos mil cuatro'
+
+>>> fecha_texto('11/12/9999')
+'Once de diciembre de nueve mil novecientos noventa y nueve'
+
+>>> fecha_texto('11/12/10000')
+'El año solo puede ser menor a 9999'
+
+Armando Perales Cruz
+>>> fecha_texto('-1/02/2026')
+'El dia solo puede ser menor a 31'
+
+Juan Pablo  
+>>> fecha_texto('03/25/2025')
+'El mes solo puede ser menor a 12'
+
+Alessandro Villela Espino
+>>> fecha_texto('00/00/2026')
+'El dia solo puede ser menor a 31'
+
+Diego Arturo Ramos Avila
+>>> from datetime import datetime
+>>> fecha_texto(datetime.now())
+'Error de formato'
+
+Day Chávez
+>>> fecha_texto('Enero 21')
+'Error de formato'
+
+>>> fecha_texto('33/SEP/25')
+'Error de formato'
+
+Aram Monsivais Villagrana
+>>> fecha_texto('00/00/0000')
+'El dia solo puede ser menor a 31'
+
+Erik raúl Luevano Martínez
+>>> fecha_texto('99/10/2026')
+'El dia solo puede ser menor a 31'
+
+Karyme Zapien Mendez
+>>> fecha_texto('')
+'Error de formato'
+
+
+
+

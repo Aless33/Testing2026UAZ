@@ -1,0 +1,176 @@
+
+>>> from fechatexto import fecha_texto
+
+>>> fecha_texto('05/05/2005')
+'Cinco de mayo de dos mil cinco'
+
+>>> fecha_texto('02/02/2014')
+'Dos de febrero de dos mil catorce'
+
+>>> fecha_texto('8/11/2004')
+'Ocho de noviembre de dos mil cuatro'
+
+>>> fecha_texto('1/1/2004')
+'Uno de enero de dos mil cuatro'
+
+>>> fecha_texto('11/12/2678')
+'Once de diciembre de dos mil seiscientos setenta y ocho'
+
+
+Armando Perales Cruz
+>>> fecha_texto('-1/02/2026')
+Formato no valido
+
+Juan Pablo  
+>>> fecha_texto('03/25/2025')
+>>>Esta Fecha no existe
+
+Xavier Zepeda
+>>> fecha_texto('05/05/2005')
+Cinco de mayo de dos mil cinco
+
+Jorge Ruvalcaba la escribiste mal 
+>>> fecha_texto('29/02/2028')
+Veintinueve de Febrero de dos mil veintiocho
+
+Alessandro Villela Espino
+>> fecha_texto('00/00/2026')
+
+Daniel Alejandro Ortiz Leyva: 
+>>> fecha_texto('43/02/2005')
+Fecha inexistente un mes solo tiene 30/31 dias
+
+Saúl Gámez Castillo 
+>>> fecha_texto('01/13/2026');
+Esta fecha no existe
+
+Diego Arturo Ramos Avila
+>>> from datetime import datetime
+>>> fecha_texto(datetime.now())
+'Error de formato'
+
+Day Chávez
+>>> fecha_texto(Enero 21)
+Formato no valido
+
+>> fecha_texto('33/SEP/25'):
+Error de formato
+Aram Monsivais Villagrana
+>>> fecha_texto('00/00/0000')
+Fecha inexistente
+
+Erik raúl Luevano Martínez
+>>> fecha_texto('99/10/2026')
+>>> El Día solo puede ser <=31
+
+Karyme Zapien Mendez
+>>> fecha_texto('')
+
+
+Omar Antonio Rodriguez Robles
+>>> fecha_texto('15/12/-2026')
+'Solo se aceptan anos entre 0 y 9999'
+
+Ivan Alfonso Hurtado Acosta
+>>> fecha_texto('15/13/325')
+'Formato no válido'
+
+Sergio González Chávez
+>>> fecha_texto('ff/03/2026')
+'Formato no valido'
+
+Sebastián Quñinez Nava
+>>> fecha_texto('09/01/2026 10:35')
+'Formato no valido'
+
+América Blanco de Robles
+>>> fecha_texto('-29/-28/2024')
+'Fecha no existe'
+
+Héctor Alexis Córdova Salas
+>>> fecha_texto('29/02/2021')
+'Fecha no existe'
+
+
+o Ramos Avila
+>>>fecha_
+
+
+text
+
+
+Noe Wilfredo
+>>> fecha_texto(2)
+solo se aceptan strings
+
+Evan Silva Cabello
+>>> fecha_texto(//)
+'Fecha vacia'
+
+Ulises Sepulveda Gutierrez
+>>> fecha_texto(29/08/21/24)
+'Formato no valido'
+
+Juan Carlos Venegas Ruiz
+>>> fecha_texto('32/13/2020')
+'La fecha es inválida'
+
+Luis Arturo Zavala Flores 
+>>> fecha_texto(19112020)
+'La fecha tiene que ser en formato DD/MM/AAAA'
+
+
+Angel Abraham Herrera Rivera 
+>>> fecha_texto('01/15/2030'):
+'El mes no es válido' 
+
+
+Marco Antonio Pinedo Del Rio
+>>> fecha_texto(None)
+'No se aceptan valores nulos'
+
+Yair Román
+>>> fecha_texto('31/04/1999')
+'El mes de Abril no tiene mas de 30 días'
+
+Cecilia Solis
+>>> fecha_texto ('30-02-2026')
+Error de formato
+
+Jorge García
+>>> fecha_texto('12/04/0000')
+'El año no puede ser 0'
+
+Luciano Aarón Gaytán Torres
+>>> fecha_texto('-0/77/3400')
+No se puede
+
+Carlos Bernabe Lopez 
+>>> fecha_texto('hola')
+'Formato no valido'
+
+Diego Ricardo Gómez Carlos
+>>> fecha_texto('31%02/2026')
+'No se permiten simbolos que no sean la diagonal'
+
+
+Eduardo Adolfo Sanchez Carrillo
+>> fecha_texto('30/SEP/25'):
+Error de formato
+
+
+HG
+>>> fecha_texto('01/01/2026/01/01/2026')
+'No se pueden escribir dos fechas'
+
+Braulio Bollain y Goytia
+>>> fecha_texto('32/04/2026')
+'Esta fecha no existe'
+
+Omar Soto Calderon de la Barca
+>>> fecha_texto('2026/02/05')
+Error de formato
+
+Bianca Delgado Chairez
+>>>fecha_texto('31/02/2026')
+'Fecha no existente'

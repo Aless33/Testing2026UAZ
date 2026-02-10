@@ -1,0 +1,76 @@
+>>> from calculadora import Calculadora
+
+>>> calc = Calculadora()
+
+>>> calc.sumar(2, 2)
+4
+
+>>> calc.sumar(2, 4)
+6
+
+>>> calc.sumar(5, 2)
+7
+
+>>> calc.sumar(2, 'f')
+Los numeros deben ser enteros
+
+>>> calc.restar(2, 2)
+0
+
+>>> calc.restar(2, 4)
+-2
+
+>>> calc.restar(5, 2)
+3
+
+>>> calc.restar('f', 2)
+Los numeros deben ser enteros
+
+>>> calc.multiplicar(2, 2)
+4
+
+>>> calc.multiplicar(2, 4)
+8
+
+>>> calc.multiplicar(5, 2)
+10
+
+>>> calc.multiplicar(2, 'f')
+Los numeros deben ser enteros
+
+>>> calc.dividir(2, 2)
+1.0
+
+>>> calc.dividir(2, 4)
+0.5
+
+>>> calc.dividir(5, 2)
+2.5
+
+>>> calc.dividir(2, 'f')
+Los numeros deben ser enteros
+
+>>> calc.raiz(2, 2)
+1.4142135623730951
+
+>>> calc.raiz(2, 4)
+1.189207115002721
+
+>>> calc.raiz(5, 2)
+2.23606797749979
+
+>>> calc.raiz(2, 'f')
+Los numeros deben ser enteros
+
+>>> calc.potencia(2, 2)
+4
+
+>>> calc.potencia(2, 4)
+16
+
+>>> calc.potencia(5, 2)
+25
+
+>>> calc.potencia(2, 'f')
+Los numeros deben ser enteros
+

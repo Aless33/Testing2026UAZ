@@ -1,0 +1,43 @@
+Estas son las pruebas para una funcion que envia un mensaje en 
+funcion de la edad.
+
+Por ejemplo:
+
+Importar modulo y funcion
+>>> from mensaje_edad import edad
+
+>>> edad(-1)
+'No existes'
+
+>>> edad(5)
+'Eres un niño'
+
+>>> edad(13)
+'Eres un adolescente'
+
+>>> edad(18)
+'Eres un adulto'
+
+>>> edad(65)
+'Eres un adulto mayor'
+
+>>> edad(120)
+'Eres Mumm-Ra'
+
+>>> edad('asdasd')
+'Solo se admiten numeros enteros'
+
+>>> edad(18.5)
+'Solo se admiten numeros enteros'
+
+>>> edad([2,30,68])
+['Eres un niño', 'Eres un adulto', 'Eres un adulto mayor']
+
+>>> edad([-1, 30, 68, 150])
+['No existes', 'Eres un adulto', 'Eres un adulto mayor', 'Eres Mumm-Ra']
+
+>>> edad([])
+'La lista debe de contener al menos un elemento'
+
+>>> edad([0])
+['Eres un niño']
