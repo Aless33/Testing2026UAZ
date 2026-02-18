@@ -1,0 +1,84 @@
+Pruebas de Tennis
+
+>>> from tennis import TenisScore
+
+>>> juego = TenisScore()
+
+-- Test 1: Marcador inicial
+>>> juego = TenisScore()
+>>> juego.score()
+'0 - 0'
+
+-- Test 2: Anotación simple para Jugador 1
+>>> juego.anotar(1)
+>>> juego.score()
+'15 - 0'
+
+-- Test 3: Jugador 2 empata
+>>> juego.anotar(2)
+>>> juego.score()
+'15 - 15'
+
+-- Test 4: Llegar a 40 - 15
+>>> juego.anotar(1)
+>>> juego.anotar(1)
+>>> juego.score()
+'40 - 15'
+
+-- Test 5: Escenario de Deuce (40 - 40 -> Deuce)
+>>> juego.anotar(2)
+>>> juego.anotar(2)
+>>> juego.anotar(2) 
+>>> juego.anotar(1)
+>>> juego.anotar(1)
+>>> juego.score()
+'Deuce - Deuce'
+
+-- Test 6: Salir de Deuce a Ventaja
+>>> juego.anotar(1)
+>>> juego.score()
+'Adv - 40'
+
+-- Test 7: Jugador gana el set
+>>> juego.anotar(1)
+>>> juego.score()
+'Win - 40'
+
+-- Test 8: Jugador 2 gana de forma directa (sin deuce)
+>>> for _ in range(2): juego.anotar(1)
+>>> for _ in range(4): juego.anotar(2)
+>>> juego.score()
+'30 - Win'
+
+-- Test 9: Batalla de Deuce infinita (Idas y vueltas)
+>>> juego = TenisScore()
+>>> for _ in range(3):
+...     juego.anotar(1)
+...     juego.anotar(2)
+>>> juego.score()
+'40 - 40'
+>>> juego.anotar(2)
+>>> juego.score()
+'40 - Adv'
+>>> juego.anotar(1)
+>>> juego.score()
+'Deuce - Deuce'
+>>> juego.anotar(1)
+>>> juego.score()
+'Adv - 40'
+>>> juego.anotar(2)
+>>> juego.score()
+'Deuce - Deuce'
+
+-- Test 10: Remontada del Jugador 2 desde Deuce
+>>> juego.anotar(2)
+>>> juego.score()
+'40 - Adv'
+>>> juego.anotar(2)
+>>> juego.score()
+'40 - Win'
+
+-- Test 11: Verificación de consistencia (Estado post-victoria)
+>>> juego.anotar(1)
+>>> juego.score()
+'40 - Win'
