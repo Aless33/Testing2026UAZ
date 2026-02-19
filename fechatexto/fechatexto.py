@@ -6,10 +6,11 @@ def fecha_texto(fecha):
     mes = int(partes[1])
     anio = int(partes[2])
 
-    if validar_fecha(dia, mes, anio) == True:
+    if validar_fecha(dia, mes, anio) is True:
         return f"{escribir_dia(dia)} de {escribir_mes(mes)} de {escribir_mil(anio)}"
     else:
         return validar_fecha(dia, mes, anio)
+
 
 def validar_fecha(dia, mes, anio):
     if aniobisiesto(anio):
@@ -18,6 +19,7 @@ def validar_fecha(dia, mes, anio):
     if mes < 1 or mes > 12: return "El mes solo puede ser menor a 12"
     if anio < 1 or anio > 9999: return "El año solo puede ser menor a 9999"
     return True
+
 
 def aniobisiesto(anio):
     if anio % 4 == 0:
@@ -31,11 +33,13 @@ def aniobisiesto(anio):
     else:
         return False
 
+
 def escribir_unidades(unidad):
     lista_unidades = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve"]
     if 1 <= unidad <= 9:
         return lista_unidades[unidad - 1]
     return ""
+
 
 def escribir_decenas(n):
     if n < 10: return escribir_unidades(n).lower()
@@ -54,6 +58,7 @@ def escribir_decenas(n):
     else:
         return lista_decenas[indice_decena] + " y " + escribir_unidades(n % 10).lower()
 
+
 def escribir_centenas(n):
     if n == 100: return "cien"
     if n < 100: return escribir_decenas(n)
@@ -68,6 +73,7 @@ def escribir_centenas(n):
         return lista_centenas[indice_centena]
     else:
         return lista_centenas[indice_centena] + " " + escribir_decenas(resto)
+
 
 def escribir_mil(n):
     if n < 1000: return escribir_centenas(n)
@@ -87,13 +93,16 @@ def escribir_mil(n):
     else:
         return prefijo + " " + escribir_centenas(resto)
 
+
 def escribir_dia(dia):
     return escribir_decenas(dia).capitalize()
+
 
 def escribir_mes(mes):
     lista_meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
                   "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
     return lista_meses[mes - 1]
+
 
 def validar_formato(fecha):
     if not isinstance(fecha, str):
